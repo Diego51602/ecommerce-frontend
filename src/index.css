@@ -85,7 +85,7 @@ body {
 .auth-link a { color: var(--gold); text-decoration: none; }
 
 /* === HOME === */
-.category-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+.category-filters { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
 .filter-btn { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 100px; padding: 8px 18px; color: #aaa; font-size: 13px; cursor: pointer; transition: all 0.2s; font-family: inherit; }
 .filter-btn:hover { border-color: rgba(201,169,110,0.4); color: #fff; }
 .filter-btn.active { background: rgba(201,169,110,0.1); border-color: rgba(201,169,110,0.5); color: var(--gold); font-weight: 600; }
@@ -152,6 +152,12 @@ body {
 .form-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 24px; }
 .form-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 20px; }
 .status-select { background: #111; color: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 13px; cursor: pointer; font-family: inherit; }
+
+/* === HOME === */ 
+
+.search-sort { display: flex; align-items: center; gap: 8px; }
+.search-sort input { flex: 1; }
+.search-sort select { background: #111; color: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 13px; cursor: pointer; font-family: inherit; }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
