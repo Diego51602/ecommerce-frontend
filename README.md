@@ -1,16 +1,57 @@
-# React + Vite
+# E-Commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicacion web de comercio electronico construida con React y Vite. Consume la API REST del proyecto ecommerce-api y cuenta con autenticacion JWT, carrito de compras, historial de ordenes y panel de administracion.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- React Router v6
+- Axios
+- Context API
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Usuario**
+- Registro e inicio de sesion
+- Catalogo de productos con filtro por categoria, buscador y ordenamiento
+- Vista de detalle de producto con selector de cantidad
+- Carrito de compras con control de cantidades
+- Historial de ordenes con estado en tiempo real
 
-## Expanding the ESLint configuration
+**Administrador**
+- Panel de administracion con pestanas Productos y Ordenes
+- Crear y eliminar productos
+- Actualizar el estado de cualquier orden
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura del proyecto
+
+```
+src/
+  api/          Configuracion de Axios e interceptores
+  components/   Navbar, ProductCard, PrivateRoute, AdminRoute
+  context/      AuthContext para manejo de sesion
+  pages/        HomePage, LoginPage, RegisterPage, ProductDetailPage, CartPage, OrdersPage, AdminPage
+```
+
+## Variables de entorno
+
+```
+VITE_API_URL=https://tu-api.onrender.com
+```
+
+## Correr localmente
+
+```bash
+git clone https://github.com/Diego51602/ecommerce-frontend
+npm install
+npm run dev
+```
+
+Requiere tener la API corriendo. Ver: github.com/Diego51602/ecommerce-api-
+
+## Demo
+
+https://ecommerce-frontend-rose-gamma.vercel.app
+
+Credenciales admin: admin@ecommerce.com / admin123
